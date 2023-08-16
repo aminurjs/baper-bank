@@ -8,32 +8,32 @@
 
 </head>
 <body class="font-sans">
-    <section class="w-full h-screen flex items-center justify-center flex-col gap-6 bg-[url('./images/bg-01.jpg')] bg-cover bg-no-repeat bg-center" >
-        <h1 class="text-center font-medium text-slate-900 text-3xl">Welcome to <span class="text-red-700">Baap er Bank</span>!!!</h1>
+    <section class="w-full pt-12 h-screen flex items-center justify-start flex-col gap-6 bg-[url('./images/bg-01.jpg')] bg-cover bg-no-repeat bg-center" >
+        <h1 class="text-center font-medium text-slate-900 text-2xl md:text-3xl">Welcome to <span class="text-red-700">Baap er Bank</span>!!!</h1>
         <div class="w-full max-w-5xl ">
-            <h2 class="text-center font-semibold text-black text-5xl mb-10">Get some moooney!!</h2>
-            <div class="grid grid-cols-3 gap-4 mb-10">
-                <div class="bg-green-600 rounded-xl p-12">
-                    <h2 class=" font-medium text-white text-4xl mb-4">Deposit</h2>
-                    <h3 class="font-semibold text-white text-5xl">$<span id="deposit-amount">00</span></h3>
+            <h2 class="text-center font-semibold text-black text-4xl md:text-5xl mb-10">Get some moooney!!</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10 p-5">
+                <div class="bg-green-600 rounded-xl p-5 md:p-10">
+                    <h2 class=" font-medium text-white text-2xl md:text-4xl mb-4">Deposit</h2>
+                    <h3 class="font-semibold text-white text-2xl md:text-5xl">$<span id="deposit-amount">00</span></h3>
                 </div>
-                <div class="bg-orange-400 rounded-xl p-12 ">
-                    <h2 class=" font-medium text-white text-4xl mb-4">Withdraw</h2>
-                    <h3 class="font-semibold text-white text-5xl">$<span id="withdraw-amount">00</span></h3>
+                <div class="bg-orange-400 rounded-xl p-5 md:p-10">
+                    <h2 class=" font-medium text-white text-2xl md:text-4xl mb-4">Withdraw</h2>
+                    <h3 class="font-semibold text-white text-2xl md:text-5xl">$<span id="withdraw-amount">00</span></h3>
                 </div>
-                <div class="bg-indigo-700 rounded-xl p-12 ">
-                    <h2 class=" font-medium text-white text-4xl mb-4">Balance</h2>
-                    <h3 class="font-semibold text-white text-5xl">$<span id="total-amount">1240</span></h3>
+                <div class="bg-indigo-700 rounded-xl p-5 px-10 md:p-10 col-span-2 md:col-span-1">
+                    <h2 class=" font-medium text-white text-2xl md:text-4xl mb-4">Balance</h2>
+                    <h3 class="font-semibold text-white text-2xl md:text-5xl">$<span id="total-amount">1240</span></h3>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-5">
-                <div class="bg-indigo-500 rounded-xl p-12">
-                    <h2 class=" font-medium text-white text-4xl mb-4">Please Deposit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 p-4">
+                <div class="bg-indigo-500 rounded-xl p-5 px-10 md:p-12">
+                    <h2 class=" font-medium text-white text-2xl md:text-4xl mb-4">Please Deposit</h2>
                     <input class="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b-2 border-stone-300 focus:border-stone-700 rounded-md" type="text" name="deposit" id="deposit-box" placeholder="Enter your deposit amount" required>
                     <button id="deposit-btn" class="bg-[#F507FE] rounded-lg py-3 px-10 text-white uppercase font-medium duration-300"></span>Deposit</button>
                 </div>
-                <div class="bg-sky-700 rounded-xl p-12 ">
-                    <h2 class=" font-medium text-white text-4xl mb-4">Please Withdraw</h2>
+                <div class="bg-sky-700 rounded-xl p-5 px-10 md:p-12 ">
+                    <h2 class=" font-medium text-white text-2xl md:text-4xl mb-4">Please Withdraw</h2>
                     <input class="w-full p-2 mb-5 outline-none text-slate-900 text-base border-b-2 border-stone-300 focus:border-stone-700 rounded-md" type="text" name="deposit" id="withdraw-box" placeholder="Enter your withdraw amount" required>
                     <button id="withdraw-btn" class="bg-[#F507FE] rounded-lg py-3 px-10 text-white uppercase font-medium duration-300"></span>Withdraw</button>
                 </div>
