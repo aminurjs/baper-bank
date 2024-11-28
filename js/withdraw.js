@@ -1,31 +1,19 @@
-document.getElementById('withdraw-btn').addEventListener('click', function(){
-    const withdrawField = document.getElementById('withdraw-box');
-    const withdrawAmountString = withdrawField.value;
-    const withdrawAmount = parseFloat(withdrawAmountString);
 
-    withdrawField.value = '';
-    if(isNaN(withdrawAmount)){
+
+
+document.getElementById('deposit-btn').addEventListener('click', function(){
+    const depositAmount = getInput('deposit-box');
+    if(isNaN(depositAmount)){
         alert('Please provide a valid number.');
         return;
     }
+    const depositPreTotal = getText('deposit-total');
 
+    const depositAmountTotal = depositAmount + depositPreTotal;
 
+    const balancePreTotal = getText('total-amount');
+    const balanceTotal = depositAmountTotal + balancePreTotal ;
 
-    const totalBox = document.getElementById('total-amount');
-    const totalAmountString = totalBox.innerText
-    const totalAmount = parseFloat(totalAmountString);
-
-    if(withdrawAmount > totalAmount){
-            alert('Baper bank a eto taka nai');
-            return;
-        }
-    const withdrawBox = document.getElementById('withdraw-amount');
-    const withdrawString = withdrawBox.innerText
-    const withdrawTotal = parseFloat(withdrawString);
-    
-
-    withdrawBox.innerText = withdrawTotal + withdrawAmount;
-    totalBox.innerText = totalAmount - withdrawAmount;
-
-
+    setText('deposit-total', depositAmountTotal)
+    setText('total-amount', balanceTotal)
 })
