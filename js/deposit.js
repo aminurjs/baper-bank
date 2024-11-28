@@ -1,28 +1,19 @@
 
 
+
 document.getElementById('deposit-btn').addEventListener('click', function(){
-    const depositField = document.getElementById('deposit-box');
-    const depositAmountString = depositField.value;
-    const depositAmount = parseFloat(depositAmountString);
-    
-    depositField.value = '';
+    const depositAmount = getInput('deposit-box');
     if(isNaN(depositAmount)){
         alert('Please provide a valid number.');
         return;
     }
+    const depositPreTotal = getText('deposit-total');
 
-    const depositBox = document.getElementById('deposit-amount');
-    const depositString = depositBox.innerText
-    const depositTotal = parseFloat(depositString);
+    const depositAmountTotal = depositAmount + depositPreTotal;
 
-    depositBox.innerText = depositTotal + depositAmount;
+    const balancePreTotal = getText('total-amount');
+    const balanceTotal = depositAmountTotal + balancePreTotal ;
 
-    const totalBox = document.getElementById('total-amount');
-    const totalAmountString = totalBox.innerText
-    const totalAmount = parseFloat(totalAmountString);
-
-    totalBox.innerText = totalAmount + depositAmount;
-
-
-
+    setText('deposit-total', depositAmountTotal)
+    setText('total-amount', balanceTotal)
 })
